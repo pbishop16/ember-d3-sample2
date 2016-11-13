@@ -1,0 +1,27 @@
+
+.heading {
+  padding: 0px 8px;
+}
+
+.content.back {
+  display: block;
+  transform: rotateY(-180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #aaa;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.flex-container > .chart-area,
+.flex-container > .detail-area  {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}

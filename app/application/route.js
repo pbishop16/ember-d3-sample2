@@ -29,7 +29,6 @@ export default Ember.Route.extend({
         xpos = 0;
         ypos += height;
       }
-      console.log(data);
       return data;
     };
     return gridData();
