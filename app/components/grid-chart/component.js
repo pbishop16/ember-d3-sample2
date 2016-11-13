@@ -61,18 +61,12 @@ export default Ember.Component.extend({
             .enter().append('g')
             .attr('class', 'row');
 
-    let getRandomIntInclusive = function(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
     let fillColor = function(hover, square) {
       if ((hover)%4 === 0 ) { d3.select(square).style('fill', '#fff'); }
       if ((hover)%4 === 1 ) { d3.select(square).style('fill', '#2C93E8'); }
       if ((hover)%4 === 2 ) { d3.select(square).style('fill', '#F56C4E'); }
       if ((hover)%4 === 3 ) { d3.select(square).style('fill', '#838690'); }
-    }
+    };
 
     let column = row.selectAll('.square')
             .data(function(d) { return d; })
@@ -94,26 +88,6 @@ export default Ember.Component.extend({
 
             });
 
-    /*
-      Temporarily unused.
-    */
-    d3.selectAll('rect.square')
-            .append('rect')
-            .attr('class', 'content')
-            .attr('x', function(d) { return d.x; })
-            .attr('y', function(d) { return d.y; })
-            .attr('width', function(d) { return d.width; })
-            .attr('height', function(d) { return d.height; })
-            .style('fill', '#232323');
-
-    d3.selectAll('rect.square')
-            .append('rect')
-            .attr('class', 'content back')
-            .attr('x', function(d) { return d.x; })
-            .attr('y', function(d) { return d.y; })
-            .attr('width', function(d) { return d.width; })
-            .attr('height', function(d) { return d.height; })
-            .style('fill', '#838690');
   },
   actions: {
 

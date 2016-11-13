@@ -1,21 +1,3 @@
-/*rect.square {
-  border: 1px solid red;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-}
-
-.square:hover {
-  transform: rotateY(-180deg);
-  box-shadow: -5px 5px 5px #aaa;
-}
-
-.content rect {
-  position: absolute;
-  backface-visibility: hidden;
-  background-color: steelblue;
-  fill: steelblue;
-}*/
 
 .heading {
   padding: 0px 8px;
