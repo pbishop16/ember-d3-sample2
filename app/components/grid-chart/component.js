@@ -20,10 +20,13 @@ export default Ember.Component.extend({
     let height = 600 - margin.top - margin.bottom;
     let labels = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'];
 
-    let reverseLabels = labels.map(function(l) {
-      let num = (labels.length - 1) - labels.indexOf(l);
-      return labels[num];
-    });
+    // my foolish implementations of reverse()
+    // let reverseLabels = labels.map(function(l) {
+    //   let num = (labels.length - 1) - labels.indexOf(l);
+    //   return labels[num];
+    // });
+
+    let reverseLabels = labels.concat().reverse();
 
     let grid = d3.select('#grid')
             .append('svg')
